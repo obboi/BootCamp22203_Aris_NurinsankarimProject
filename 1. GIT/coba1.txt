@@ -1,0 +1,4 @@
+/-- Config GitHub --\
+git config --global user.name "aris"
+git config --global user.email "arisnik.business@gmail.com"
+git config --global core.editor "code--wait"
