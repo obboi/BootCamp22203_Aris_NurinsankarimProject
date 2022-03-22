@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ 
+	<script >
+		function inputdata(){
+	  var n=document.forms['datapribadi']['nama'].value;
+	  var e=document.forms['datapribadi']['email'].value;
+	  var p=document.forms['datapribadi']['agama'].value;
+	  var a=document.forms['datapribadi']['alamat'].value;        
+											  
+	  var tabel = document.getElementById("databel");
+	  var baris = tabel.insertRow(1);
+	  var kol1 = baris.insertCell(0);
+	  var kol2 = baris.insertCell(1);
+	  var kol3 = baris.insertCell(2);
+	  var kol4 = baris.insertCell(3);
+			  
+	  kol1.innerHTML = n;
+	  kol2.innerHTML = e;
+	  kol3.innerHTML = p;
+	  kol4.innerHTML = a;
+	 }
+	 </script>
+	 
+    <title>Membuat Input Data Dengan Javascript Tanpa Database</title>
+ 
+    
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8"><h1>Hello, world!</h1>
+          <form name="datapribadi" method="" action="">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Nama</label>
+        <input type="text" class="form-control" name="nama" id="exampleFormControlInput1" placeholder="isi nama asli....">
+        <label for="exampleFormControlInput1">Email</label>
+        <input type="email" class="form-control" name="email" id="exampleFormControlInput2" placeholder="isi email aktif....">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Agama</label>
+        <select class="form-control" name="agama" id="exampleFormControlSelect1">
+          <option>Islam</option>
+          <option>Hindu</option>
+          <option>Budha</option>
+          <option>Kristen</option>             
+          <option>Konghucu</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Alamat</label>
+        <textarea class="form-control mb-3" name="alamat" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <button type="button" onClick='inputdata()' class="btn btn-success">Simpan</button>
+<button type="reset" class="btn btn-warning">Batal</button>
+      </div>
+      <div class="row">
+        <table class="table" id="databel">
+          <thead>
+            <tr>
+              <th scope="col">Nama</th>
+              <th scope="col">Email</th>
+              <th scope="col">Agama</th>
+              <th scope="col">Alamat</th>
+            </tr>
+          </thead>
+        </table>  
+      </div>
+    </form>
+        </div>          
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
+   </body>
+</html>
