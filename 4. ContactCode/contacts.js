@@ -5,6 +5,16 @@ const rl = readline.createInterface({
     output : process.stdout,
 });
 
+const dirPath = './data';
+if(!fs.existsSync(dirPath)){
+    fs.mkdirSync(dirPath);
+}
+
+const dataPath = './data/contacts.json';
+if(!fs.existsSync(dataPath)){
+    fs.writeFileSync(dataPath,'[]','utf-8')
+}
+
 //make a function to ask
 const question = (ask)=>{
     return new Promise((resolve,reject)=>{
@@ -25,3 +35,4 @@ const saveContact = (name,mobile,email) =>{
 }
 
 module.exports = {saveContact, question}
+
