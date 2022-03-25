@@ -55,4 +55,3 @@ const saveContact = (name,mobile,email) =>{
 }   
 
 module.exports = {saveContact}
-
