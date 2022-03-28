@@ -41,6 +41,19 @@ const listContact =()=>{
     });
 };
 
+const detailContact = (name)=>{
+    const contacts = loadContact();
+    contactName = {name}
+    const detailInformation = contacts.find((contactName) => contactName.name === name)
+     if(detailInformation){
+        console.log(` ${detailInformation.name}\n${detailInformation.mobile}\n${detailInformation.email}\n`)
+        return false;
+    }else{
+        console.log('Name is not found')
+    }
+
+}
+
 const saveContact = (name,mobile,email) =>{
     const contact = {name, mobile, email};
     const file = fs.readFileSync('data/contacts.json','utf8')
@@ -70,5 +83,9 @@ const saveContact = (name,mobile,email) =>{
     // rl.close();
 }   
 
-module.exports = {saveContact, listContact}
+module.exports = {
+    saveContact, 
+    listContact,
+    detailContact,
+}
 
