@@ -1,0 +1,10 @@
+expressjs.com
+aplikasi frameword dengan node js basic web
+
+MVC (model-view-controller)
+terintegrasi dengan view Rendering Engine buat manage template
+Middleware
+
+Unopinionated
+-lebih terbuka dan fleksibel dibebaskan dalam ekplorasi membuat sesuatu
+
