@@ -1,0 +1,9 @@
+View Engine / Template Engine
+untuk mempermudah pembuatan halaman web
+
+-> EJS : memiliki kelebihan dalam websitenya
+https://ejs.co
+
+
+install : npm i ejs
+install ekstensi : pilih ejs languagge support
