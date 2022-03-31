@@ -1,0 +1,25 @@
+<%- include('layout/header') %> 
+<%- include('layout/nav') %> 
+
+
+    
+    <h1>Web Server Node JS</h1>
+    
+    <p>Wellcome to my page <%= nama, cont %> </p>
+
+
+<!-- array ejs + error Handling jika data tidak tersedia-->
+    <p>List Contact</p>
+    <% if (cont.length > 0){%>
+    <% cont.forEach(list =>  {%>
+     <ul>
+        <li>nama : <%=list.nama %> </li>
+        <li>email : <%=list.email %> </li>
+    </ul>
+
+    <% })}else{ %>
+        
+    <p>contact data is empty</p> 
+    <% } %> 
+
+<%- include('layout/footer') %> 
