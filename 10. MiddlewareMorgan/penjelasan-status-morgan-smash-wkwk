@@ -1,0 +1,21 @@
+
+
+
+
+
+200 – Everything is OK
+Kode ini muncul saat halaman website atau data bekerja sebagaimana mestinya.
+
+Time: 1648794577737
+perhitungan waktu akses website(server) mulai per tanggal 1 Januari 1970
+
+GET /asas 404 8.051 ms - 18 
+sebgai routing/metode yang digunakan website(server) untuk merespon permintaan dari browser(client) berupa get atau meminta/mendapatkan halaman /asas namun tidak tersedia maka akan di tampilkan "Page Not Found"
+404 – The requested resource was not found.
+Inilah kode error tiga digit paling terkenal di jagat maya. Error ini menunjukkan bahwa data yang diminta browser itu tidak ada di server.
+8.051 ms - kecepatan server dalam merespone permintaan dari browser(client) dihitung dalam satuan sekon.
+
+GET / 304 87.530 ms - -
+sebgai routing/metode yang digunakan website(server) untuk merespon permintaan dari browser(client) berupa get atau meminta/mendapatkan halaman utama.
+304 – The requested resource has not been modified since the last time you accessed it
+Kode ini memberitahu browser bahwa data yang disimpan di cache itu tidak berubah. Sehingga halaman website bisa lebih cepat dibuka.
