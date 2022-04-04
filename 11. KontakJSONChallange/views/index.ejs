@@ -1,0 +1,21 @@
+
+    
+    <h1>Web Server Node JS</h1>
+    
+    <p>Wellcome to my page <%= nama %> </p>
+
+
+<!-- array ejs + error Handling jika data tidak tersedia-->
+    <p>List Contact</p>
+    <% if (contacts.length > 0){%>
+    <% contacts.forEach(list =>  {%>
+     <ul>
+        <li>nama : <%=list.name %> </li>
+        <li>email : <%=list.email %> </li>
+    </ul>
+
+    <% })}else{ %>
+        
+    <p>contact data is empty</p> 
+    <% } %> 
+
