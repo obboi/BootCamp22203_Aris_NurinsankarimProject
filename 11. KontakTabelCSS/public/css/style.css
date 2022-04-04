@@ -1,0 +1,12 @@
+img {
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    border-radius: 50%;
+  }
+
+  .container{
+    background-color: brown;
+  }
