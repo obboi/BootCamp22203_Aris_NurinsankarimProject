@@ -6,6 +6,8 @@ const expressLayouts = require('express-ejs-layouts')
 const morgan  = require('morgan')
 const app = express()
 const path = require('path');
+
+// manggil loadcontact file json
 const { loadContact } = require('./contacts');
 const port = 3000
 
@@ -32,6 +34,8 @@ app.get('/', (req, res) => {
   // memasukan function agar dapat memanggil setiap function yg terdapat pada file .ejs
     const nama ="Aris"
     const title ="Wellcome to my page"
+
+    // memanggil loadcontact untuk contact.js
     const contacts = loadContact()
     res.render('index',
     {
