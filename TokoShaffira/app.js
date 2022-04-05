@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs')
 const path = require('path')
+const contacts = require ('./contacts.js');
 // const halaman = (path, res)=>{
 //     fs.readFile(path,(err,data)=>{
 //         if(err){

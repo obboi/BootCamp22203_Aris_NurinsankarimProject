@@ -11,16 +11,16 @@ app.set('view engine','ejs')
 
 app.get('/', (req, res) => {
   cont =[
-  //   {
-  //   nama:'Budi',
-  //   email:'bdi@gmail.com',
-  // },{
-  //   nama:'andi',
-  //   email:'and@gmail.com',
-  // },{
-  //   nama:'audi',
-  //   email:'aui@gmail.com',
-  // },
+    {
+    nama:'Budi',
+    email:'bdi@gmail.com',
+  },{
+    nama:'andi',
+    email:'and@gmail.com',
+  },{
+    nama:'audi',
+    email:'aui@gmail.com',
+  },
   ]
 
   // memasukan function agar dapat memanggil setiap function yg terdapat pada file .ejs

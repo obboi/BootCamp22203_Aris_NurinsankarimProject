@@ -1,4 +1,4 @@
-// EJS
+// Express-EJS-Layout
 
 const express = require('express');
 const { request } = require('http');

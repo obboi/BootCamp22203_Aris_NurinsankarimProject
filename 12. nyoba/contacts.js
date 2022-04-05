@@ -23,6 +23,8 @@ if(!fs.existsSync(dataPath)){
 //         })
 //     })
 // };
+
+// ambil contact.json
 const loadContact = () => {
     const file = fs.readFileSync('data/contacts.json','utf-8');
     const contacts = JSON.parse(file);
@@ -36,6 +38,13 @@ const listContact = () => {
         console.log(`${i+1}. ${contact.name} - ${contact.phone}`);
     });
 };
+
+// cari kontak berdasarkan nama
+const findContact = (name) => {
+    const contacts = loadContact()
+    const contact = contacts.find((contact) => contact.name.toLowerCase() === name.toLowerCase());
+    return contact;
+}
 
 const saveContacts = (name, phone, email) => {
     const contact = {name, phone, email};
@@ -69,18 +78,18 @@ const saveContacts = (name, phone, email) => {
     console.log('Thank You');
  }
 
-const details = (named) => {
-    const contacts = loadContact();
-    const contact = {named};
-    let find = contacts.find((contact) => contact.name === named);
-    if(find){
-    console.log('Details : ');
-    console.log(`${find.name} - ${find.phone} - ${find.email}`);
-    }else{
-        console.log('Tidak ada');
-        return false;
-    }
-}
+// const findContact = (named) => {
+//     const contacts = loadContact();
+//     const contact = {named};
+//     let find = contacts.find((contact) => contact.name === named);
+//     if(find){
+//     console.log('Details : ');
+//     console.log(`${find.name} - ${find.phone} - ${find.email}`);
+//     }else{
+//         console.log('Tidak ada');
+//         return false;
+//     }
+// }
 
 const destroy = (name) => {
     const contacts = loadContact();
@@ -120,6 +129,7 @@ const deleteContact = (name) => {
  module.exports = {
     saveContacts,
     listContact,
-    details,
     deleteContact,
+    loadContact,
+    findContact,
 }
