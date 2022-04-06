@@ -1,0 +1,4 @@
+  <% if (msg.length !==0) { %>
+            <div class="alert alert-success" role="alert"><%= msg  %> </div>
+          <% } %>
+ msg success
