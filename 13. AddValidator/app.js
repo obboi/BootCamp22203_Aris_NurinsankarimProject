@@ -1,11 +1,11 @@
 // Express-EJS-Layout
 
-const express = require('express');
-const { request } = require('http');
-const expressLayouts = require('express-ejs-layouts')
-const morgan  = require('morgan')
-const app = express()
-const path = require('path');
+const express = require('express'); //deklarasi express jadi 
+const { request } = require('http'); //deklarasi request 
+const expressLayouts = require('express-ejs-layouts') //deklarasi expressLayouts
+const morgan  = require('morgan') //deklarasi morrgan
+const app = express() //deklarasi app agar jalankan express
+const path = require('path'); //deklarasi path
 
 //require 3 modul tampilan cepat
 // const session = require('express-session') 
@@ -13,9 +13,10 @@ const path = require('path');
 // const flash = require('connect-flash')
 
 
-// manggil loadcontact file json
+// manggil loadcontact json, findContact json, addContact, checlDuplicate
 const { loadContact, findContact, addContact, checkDuplicate } = require('./contacts');
 const port = 3000
+//untuk memvalidasi data yang akan di inputkan, dan mengubah keterangan ketika hasil validasi ditampilkan
 const { body, validationResult, check } = require('express-validator');
 const { resetWatchers } = require('nodemon/lib/monitor/watch');
 
@@ -51,32 +52,32 @@ app.use((req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-
-
   // memasukan function agar dapat memanggil setiap function yg terdapat pada file .ejs
+  // manggil idex.ejs
     const nama ="Aris Nur Insan Karim"
     const title ="Wellcome to my page"
     res.render('index',
     {
       nama,
       title,
-    
     })
    
 });
 
+// panggil about page
 app.get('/about', (req, res) => {
     const title ="about page"
     res.render('about',{title})
 });
 
+// load contact dan panggil contact page
 app.get('/contact', (req, res) => {
   const title ="contact page"
   const contacts = loadContact()
   res.render('contact',{title,contacts,})
   // msg: req.flash('msg')
-  
 })
+
 // halaman detail kontak
 app.get('/contact/add',(req,res)=>{
   res.render('add-contact',{
@@ -93,10 +94,10 @@ app.post('/contact',[
     }
     return true;
   }),
+
   // cek email dan number bener apa asalah
   check('email','Email not valid').isEmail(),
   check('phone', 'Number not valid').isMobilePhone(),
-
 ],(req,res)=>{
 const errors = validationResult(req);
 if(!errors.isEmpty()) {
@@ -117,8 +118,6 @@ if(!errors.isEmpty()) {
 app.get('/contact/:name', (req, res) => {
   const contact = findContact(req.params.name);
   const title ="Halaman Contact"
-  
-  
   res.render('detail',{
     title,
     contact,
@@ -126,15 +125,13 @@ app.get('/contact/:name', (req, res) => {
   
 })
 
-
-
-     
-
+// menampilkan status 404-pagenotfound bila index.ejs tidak terpanggil
 app.use('/', (req, res) => {
     res.status(404);
     res.send('Page Not Found 404')
   })
 
+// open server
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
