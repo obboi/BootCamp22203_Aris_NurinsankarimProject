@@ -54,7 +54,7 @@ app.get('/', (req, res) => {
 
 
   // memasukan function agar dapat memanggil setiap function yg terdapat pada file .ejs
-    const nama ="Aris"
+    const nama ="Aris Nur Insan Karim"
     const title ="Wellcome to my page"
     res.render('index',
     {
