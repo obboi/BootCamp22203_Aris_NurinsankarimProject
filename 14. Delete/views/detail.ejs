@@ -1,0 +1,27 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md8">
+            <h2>Detail Contact</h2>
+            <!-- jika data salah maka tampil ini -->
+            <% if (!contact) { %>
+              <div class="alert alert-danger" role="alert">
+                Contact Data not Avaible <a href="/contact" class="alert-link"><br>&laquo;Back to Contact List</a>
+              </div>
+            <% } else { %>
+
+
+            
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Nama :   <%= contact.name %> </h5>
+                  <h6 class="card-subtitle mb-2">Nomer : <%= contact.phone %> </h6>
+                  <p class="card-text">Email : <%= contact.email %> </p>
+                  <a href ="/contact/delete/<%= contact.name %>" class="btn  btn-danger" onclick="return confirm('Are You Sure?')">Delete</a>
+                  <a href ="/contact" class="btn  btn-outline-dark rounded-pill"><i class="bi bi-arrow-left-square"></i> Back to Contact List</a>
+                  
+                </div>
+              </div>
+              <% } %> 
+        </div>
+    </div>
+</div>
