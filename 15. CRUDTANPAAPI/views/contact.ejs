@@ -1,0 +1,54 @@
+
+
+<div class="container" mt-4>
+    <div class="row">
+        <div class="col-md8">
+            <h1 class="text-centrer">Contact List</h1>
+
+          <!-- tombol add contact -->
+            <a href="/contact/add" class="btn btn-outline-dark rounded-pill"><i class="bi bi-plus-square"></i> Add Contact List</a>
+
+            <% if (msg.length != 0) { %>
+              <div class="alert alert-success" role="alert"><%= msg %></div> 
+            <% } %>
+        
+
+            <% if (contacts.length > 0){%>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% contacts.forEach((list,i) => {i++  %>
+                  <tr>
+                    <td scope="row"><%= i++ %> </td>
+                    <td><%=list.name %></td>
+                    <td><%=list.phone %></td>
+                    <td><%=list.email %></td>
+                    <td>
+                        <!-- tombol detail -->
+                        <a href="/contact/<%=list.name%>" class="btn  btn-dark badge rounded-pill"><i class="bi bi-info"></i>detail</a>
+                    </td>
+                    <% })%>
+                    <% }else{ %>
+                      <tr>eweh</tr>
+                    <% } %> 
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <!-- tombol balik ke index.ejs -->
+    <a href="/" class="btn  btn-successs badge badge-pill badge bg-dark"><i class="bi bi-arrow-left-square"></i> </a>
+
+</div>
+
+
+<br><br>
+
