@@ -1,0 +1,88 @@
+postgresql
+-salah satu alternatif terbaik untuk pengolahan database
+-dapat digunakan dengan gratis
+
+pgsql merupakan open source RDBMS (Relational Database Managment System) yang dapat di utak atik dalamnya
+postgresql sudah ada pada thn 1986 yg diberinama POSTGRES di univ california,brekley yg dipimpin oleh michael stonebreaker
+pada tahun 1996 baru diberinama postgresql karena menunjang sql
+setelah beberapa view pada tgn 2007 baru diresmikan dengan nama postgresql
+
+postgresql mendukung bahasa pemrograman populer
+.NET
+GO
+Java
+Delphi
+Perl
+C/C++
+PHP
+Tcl
+C#
+JavaScript
+Phyton
+
+postgresql fitur
+-Asynchronous Replication = duplikasi database yg dapat melakukan dari master ke master dan dari master ke replika
+-Data Integrity = Support Primary Key, Foregin Key dll
+-Inheritance = dapat mewarisi karakteristik ibu object ke anak object
+-Locking Mechanical
+-Point-in-time recovery
+-procedural language
+-rule customization
+-savepoint
+-tabespaces
+
+fungsi postgresql
+-Data Definition language(DDL)
+-Manipulate data field or values from tables (DML)
+-Manage transactions in the database with Data Control language(DCL)
+
+tipe data yg disupport postgresql
+-boolean
+-character
+-numeric
+-temporal
+-array
+-JSON
+-UUID
+-special data types
+postgresql mendukung jg user Definition data edition 
+
+kelebihan postgresql
+-free open source
+-dapat menikmati seluruh fitur secara gratis
+-dapat digunakan pada scala besar (cnth : sistem GIS (Geographical Information System) sebuah sistem yg dapat menampilkan banyak informasi sekaligus)
+-Mudah untuk di duplikasi/Clone/Replication
+    -single-master-Replication (SMR) = mengubah data satu lg tidak akan mengubah data sebelumnya (seperti update time base)
+    -multi-master-Replication (MMR) = mengubah data satu lg akan mengubah data sebelumnya
+    dengan kelebihan ini kita dapat memindah kan server dengan Mudah
+-Self Development
+-Documentation = lengkap tinggal cari di dokumentasi webnya
+
+
+kekurangan postgresql
+-slow perfomance = lambaaaaat, karena proses pemindaian dari baris pertama hingga baris ahir, segala ada
+-kurang populer, kesulitan dalam mencari layanan hosting yg Support default
+
+perbandingan antara postgresqlda mysql
+
+-free open souce                   -open source paid version
+-all standard sql                  -some standard sql
+-Support ke 2 replika              -hanya bisa replika master ke master
+-sering merilis fitur baru         -jarang merilis fitur baru
+
+
+npm i express pg = untuk menghubungkan node denga database pg
+
+
+klik kanan database buat database save
+masuk database masuk schema buat tables
+
+tabel klik kanan script pilih dah
+
+primary key harus unik
+
+ASC = ascending disusun dari a-z
+DESC = descending disusun dari z-a
+SELECT ..... FROM contacts(databasenya)
+    - SELECT * FROM contacts untuk seluruh nya
+    - SELECT atrubut(nama/mobile/email) FROM contacts manggil bedasarkan atribut
