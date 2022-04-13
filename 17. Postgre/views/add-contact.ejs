@@ -1,0 +1,42 @@
+<div class="container">
+  <h3>Form Add Contact</h3>
+
+  <% if (typeof err != 'undefined') { %>
+      <div class="alert" role="alert">
+          <% err.forEach(error => { %>
+          <ul>
+              <li><%= error.msg %></li>
+          </ul>
+          <% }) %> 
+      </div>
+  <% } %> 
+
+  <form action="/contact/store" method="post" class="form-control">
+    
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Nama</span>
+        <input type="text" class="form-control"  id="name" name="name" required placeholder="Nama" aria-label="Username" aria-describedby="addon-wrapping">
+      </div>
+
+    
+<br>
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Nomor HP</span>
+        <input type="text" class="form-control"  id="mobile" name="mobile" required placeholder="Nomor HP"  aria-describedby="addon-wrapping">
+      </div>
+
+<br>
+      
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Email</span>
+        <input type="text" class="form-control"  id="email" name="email" required placeholder="Email"  aria-describedby="addon-wrapping">
+      </div>
+
+<br>
+
+      
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary" type="button">Add Contact</button>
+        </div>
+  </form>
+</div>

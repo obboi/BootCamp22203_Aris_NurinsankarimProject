@@ -1,0 +1,39 @@
+<div class="container mt-3">
+   <div class="row">
+       <div class="col text-center">
+           <div class="img"><img src="img/wgslogo.jpg">
+           <h1 class="display-4">Welcome to WGS Bootcampbatch1 landingpage <br><%= nama  %> </h1>         
+           </div>
+       </div>
+   </div>
+</div>
+<br><br>
+
+<div class="container">
+    <div class="list">
+        <h3>Kontak List Anda: </h3>
+        <% if (kontak.length < 1) { %>
+            <p>Data Kosong</p>
+        <% }else{ %>
+        <% kontak.forEach(kontak => { %>
+            <ul>
+                <li>No. <%= index++ %> </li>
+                <li>Nama : <%= kontak.name %> </li>
+                <li>Email : <%= kontak.email %> </li>
+                <li>No HP : <%= kontak.mobile %> </li>
+            </ul>
+        <% }) %>
+        <% } %> 
+    </div>
+</div>
+
+
+    
+
+    <!-- array ejs + error Handling jika data tidak tersedia-->
+        
+   
+   
+  
+  
+    

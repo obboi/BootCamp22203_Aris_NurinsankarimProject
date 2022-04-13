@@ -1,0 +1,7 @@
+  <% if (msg.length !==0) { %>
+            <div class="alert alert-success" role="alert"><%= msg  %> </div>
+          <% } %>
+ msg success
+
+
+ perhatikan spasi dan pengetikan jangan sampai typo wkwkkw
