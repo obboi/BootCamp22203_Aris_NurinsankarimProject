@@ -1,0 +1,34 @@
+{
+  "contacts": [
+    {
+      "id": 3,
+      "Nama": "Dida",
+      "Email": "dida@gmail.com",
+      "NoHP": "08123244334"
+    },
+    {
+      "id": 4,
+      "Nama": "Asep",
+      "Email": "asep@gmail.com",
+      "NoHP": "0813254591334"
+    },
+    {
+      "id": 5,
+      "Nama": "Jose",
+      "Email": "jose@gmail.com",
+      "NoHP": "083778591334"
+    },
+    {
+      "id": 6,
+      "Nama": "Bob",
+      "Email": "bob@gmail.com",
+      "NoHP": "088220542344"
+    },
+    {
+      "id": 7,
+      "Nama": "Albert",
+      "Email": "albert@gmail.com",
+      "NoHP": "08812351334"
+    }
+  ]
+}
