@@ -1,0 +1,33 @@
+button{
+    width: auto;
+    align-items: center;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+
+    /* background-color: blue; */
+    color: #000;
+    border: none;
+    margin: 0 3px;
+    padding: 0 20px;
+}
+
+button:nth-child(1){
+    background-color: aqua;
+}
+button:nth-child(2){
+    background-color: brown;
+}
+button:nth-child(3){
+    background-color: darkgreen;
+}
+
+button:nth-child(1):hover{
+    background-color: rgb(21, 172, 172);
+}
+
+.link{
+    text-decoration: none;
+    color: #000;
+}
